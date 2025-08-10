@@ -1,0 +1,176 @@
+<!-- templates/contact.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact - Farhan Siddiqui{% endblock %}
+
+{% block content %}
+<section class="contact-header py-5 mt-5 bg-primary text-white">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold mb-3">Get In Touch</h1>
+        <p class="lead">Let's discuss opportunities in Data Science, Engineering, or Web Development</p>
+    </div>
+</section>
+
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form-container bg-white p-4 p-md-5 rounded shadow-sm">
+                    <h2 class="h3 fw-bold mb-4">Send Me a Message</h2>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="{{ form.name.id_for_label }}" class="form-label">Full Name</label>
+                                {{ form.name }}
+                            </div>
+                            <div class="col-md-6">
+                                <label for="{{ form.email.id_for_label }}" class="form-label">Email Address</label>
+                                {{ form.email }}
+                            </div>
+                            <div class="col-12">
+                                <label for="{{ form.subject.id_for_label }}" class="form-label">Subject</label>
+                                {{ form.subject }}
+                            </div>
+                            <div class="col-12">
+                                <label for="{{ form.message.id_for_label }}" class="form-label">Message</label>
+                                {{ form.message }}
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h2 class="h3 fw-bold mb-4">Contact Information</h2>
+                    
+                    <div class="contact-item mb-4 p-3 bg-light rounded">
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-graduation-cap fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Education</h5>
+                                <p class="mb-0 text-muted">MH Saboo Siddik College of Engineering</p>
+                                <small class="text-muted">Mechanical Engineering Student</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item mb-4 p-3 bg-light rounded">
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-map-marker-alt fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Location</h5>
+                                <p class="mb-0 text-muted">Mumbai, Maharashtra, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-item mb-4 p-3 bg-light rounded">
+                        <div class="d-flex align-items-center">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-code fa-2x text-primary"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Specialties</h5>
+                                <p class="mb-0 text-muted">Data Science, AI/ML, Web Development</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links mt-4">
+                        <h5 class="mb-3">Connect With Me</h5>
+                        <div class="d-flex gap-3">
+                            <a href="#" class="btn btn-outline-primary btn-lg">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="btn btn-outline-primary btn-lg">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:farhan@example.com" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="availability-status mt-4 p-3 bg-success bg-opacity-10 rounded border border-success">
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-circle text-success me-2"></i>
+                            <span class="fw-semibold text-success">Available for Projects</span>
+                        </div>
+                        <small class="text-muted d-block mt-1">
+                            Open to internships and collaborative projects
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-center display-6 fw-bold mb-5">Frequently Asked Questions</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                What services do you offer?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                I specialize in Data Science projects, AI/ML implementations, web development with Django, 
+                                and engineering design using AutoCAD, SolidWorks, and ANSYS. I'm also available for 
+                                data analysis and visualization projects using Python and Power BI.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                Are you available for internships?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! I'm actively seeking internship opportunities in Data Science, AI/ML, or related fields. 
+                                I'm particularly interested in roles that combine my engineering background with data analysis 
+                                and machine learning applications.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                How quickly do you respond to messages?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                I typically respond to messages within 24 hours. For urgent inquiries, please mention 
+                                "Urgent" in the subject line, and I'll prioritize your message.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,214 @@
+
+<!-- templates/about.html -->
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}About - Farhan Siddiqui{% endblock %}
+
+{% block content %}
+<section class="about-section py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <img src="{% static 'images/profile.jpg' %}" alt="Farhan Siddiqui" 
+                     class="img-fluid rounded-circle about-img shadow-lg">
+            </div>
+            <div class="col-lg-8">
+                <div class="about-content">
+                    <h1 class="display-5 fw-bold mb-4">About Me</h1>
+                    <div class="about-text">
+                        <p class="lead mb-4">
+                            I'm <strong>Farhan Siddiqui</strong>, a passionate third-year Mechanical Engineering 
+                            student at <strong>MH Saboo Siddik College of Engineering</strong>. My journey combines 
+                            the precision of mechanical engineering with the innovation of modern technology.
+                        </p>
+                        <p class="mb-4">
+                            I am deeply passionate about <strong>Data Science, AI/ML, and Web Development</strong>. 
+                            I enjoy researching and learning about new technologies, constantly pushing myself 
+                            to stay at the forefront of technological advancement.
+                        </p>
+                        <p class="mb-4">
+                            My career goal is to become a <strong>Data Scientist</strong>, where I can leverage 
+                            my analytical skills and engineering background to solve complex problems and drive 
+                            data-driven decisions.
+                        </p>
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-graduation-cap text-primary me-2"></i>Education</h5>
+                                <p>B.E. Mechanical Engineering<br>
+                                <small class="text-muted">MH Saboo Siddik College of Engineering</small></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h5><i class="fas fa-target text-primary me-2"></i>Career Goal</h5>
+                                <p>Data Scientist<br>
+                                <small class="text-muted">Specializing in AI/ML and Analytics</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section class="skills-detail-section py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center display-6 fw-bold mb-5">Technical Skills</h2>
+        <div class="row g-4">
+            <!-- Engineering Design -->
+            <div class="col-lg-6">
+                <div class="skill-category bg-white p-4 rounded shadow-sm h-100">
+                    <h4 class="mb-3"><i class="fas fa-drafting-compass text-primary me-2"></i>Engineering Design</h4>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>AutoCAD</span>
+                            <span class="text-muted">Advanced</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>SolidWorks</span>
+                            <span class="text-muted">Advanced</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>ANSYS</span>
+                            <span class="text-muted">Intermediate</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-primary" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Programming & Development -->
+            <div class="col-lg-6">
+                <div class="skill-category bg-white p-4 rounded shadow-sm h-100">
+                    <h4 class="mb-3"><i class="fas fa-code text-success me-2"></i>Programming & Development</h4>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Python</span>
+                            <span class="text-muted">Advanced</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Django</span>
+                            <span class="text-muted">Intermediate</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>GitHub</span>
+                            <span class="text-muted">Intermediate</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-success" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Analysis -->
+            <div class="col-lg-6">
+                <div class="skill-category bg-white p-4 rounded shadow-sm h-100">
+                    <h4 class="mb-3"><i class="fas fa-chart-bar text-info me-2"></i>Data Analysis</h4>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>MS Excel</span>
+                            <span class="text-muted">Advanced</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Power BI</span>
+                            <span class="text-muted">Intermediate</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Office Suite -->
+            <div class="col-lg-6">
+                <div class="skill-category bg-white p-4 rounded shadow-sm h-100">
+                    <h4 class="mb-3"><i class="fas fa-file-alt text-warning me-2"></i>Office Suite</h4>
+                    <div class="skill-item mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>MS Word</span>
+                            <span class="text-muted">Advanced</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>MS PowerPoint</span>
+                            <span class="text-muted">Advanced</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Interests Section -->
+<section class="interests-section py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="display-6 fw-bold">Areas of Interest</h2>
+                <p class="lead">What drives my passion for technology</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="interest-card text-center p-4 bg-light rounded h-100">
+                    <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                    <h5>Artificial Intelligence</h5>
+                    <p>Exploring machine learning algorithms and their applications in solving real-world problems.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="interest-card text-center p-4 bg-light rounded h-100">
+                    <i class="fas fa-database fa-3x text-success mb-3"></i>
+                    <h5>Data Science</h5>
+                    <p>Analyzing complex datasets to extract meaningful insights and drive decision-making.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="interest-card text-center p-4 bg-light rounded h-100">
+                    <i class="fas fa-laptop-code fa-3x text-info mb-3"></i>
+                    <h5>Web Development</h5>
+                    <p>Building responsive and user-friendly web applications using modern technologies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
